@@ -1,0 +1,10 @@
+{
+  "name": "Petstore",
+  "version": "0.1",
+  "description": "Sample Petstore",
+  "main": "index.js",
+  "repository": "https://github.com/Takushi0314/Petstore.git",
+  "author": "Takushi Nishiyama <takushi.nishiyama.0314@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
