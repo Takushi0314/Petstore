@@ -7,7 +7,7 @@ info:
     name: MIT
   contact:
     email: takushi.nishiyama.0314@gmail.com
-host: localhost
+host: localhost:8080
 basePath: /api/v1
 schemes:
   - http
