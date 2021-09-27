@@ -7,4 +7,4 @@ SCRIPT_DIR=$(cd $(dirname $0); pwd)
 export COMPOSE_FILE=docker-compose.dev.yml
 
 # docker-composeの実行
-docker-compose down mock_server
+docker-compose stop mock_server
