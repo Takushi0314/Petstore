@@ -51,7 +51,7 @@ paths:
           description: Server Error
           schema:
             $ref: "#/definitions/Error"
-    post:
+    put:
       summary: update a pet
       tags:
         - Pet
