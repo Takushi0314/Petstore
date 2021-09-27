@@ -1,0 +1,9 @@
+version: "3"
+services:
+    mock_server:
+      container_name: mock_server
+      build:
+        context: ./
+        dockerfile: ./docker/mockserver/Dockerfile
+      ports:
+        - "8080:8080"

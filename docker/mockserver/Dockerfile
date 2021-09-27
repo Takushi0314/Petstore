@@ -8,6 +8,10 @@ RUN java -jar /opt/swagger-codegen-cli/swagger-codegen-cli.jar \
     generate -i /mock-seed/swagger.yml -l nodejs-server -o ./
 
 FROM node:14.2.0-alpine3.10 as executor
+# JST設定
+RUN apk --no-cache add tzdata && \
+    cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
+    apk del tzdata
 WORKDIR /mock-server
 # 上記で作ったモックサーバーのファイル群をコピー
 COPY --from=builder /mock-server ./

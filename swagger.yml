@@ -57,6 +57,12 @@ paths:
         - Pet
       operationId: updatePetById
       parameters:
+        - name: petId
+          in: path
+          description: ID of pet to return
+          required: true
+          type: integer
+          format: int64
         - name: body
           in: body
           description: Pet object that needs to be aded to the store
@@ -86,6 +92,12 @@ paths:
         - Pet
       operationId: deletePetById
       parameters:
+        - name: petId
+          in: path
+          description: ID of pet to return
+          required: true
+          type: integer
+          format: int64
         - name: body
           in: body
           description: Pet object that needs to be aded to the store
