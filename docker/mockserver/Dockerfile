@@ -1,4 +1,4 @@
-FROM swaggerapi/swagger-codegen-cli:2.4.14 as builder
+FROM swaggerapi/swagger-codegen-cli:latest as builder
 WORKDIR /mock-seed
 # ホストマシンのswagger.ymlをコピー
 COPY ./swagger.yml ./
@@ -7,7 +7,7 @@ WORKDIR /mock-server
 RUN java -jar /opt/swagger-codegen-cli/swagger-codegen-cli.jar \
     generate -i /mock-seed/swagger.yml -l nodejs-server -o ./
 
-FROM node:14.2.0-alpine3.10 as executor
+FROM node:lts-alpine as executor
 # JST設定
 RUN apk --no-cache add tzdata && \
     cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
